@@ -218,9 +218,8 @@ public class GamePanel extends JPanel implements Runnable{
         degree = (float) Math.atan2(mouse.movCodeY - (player.playerY + 50), 
             mouse.movCodeX - (player.playerX + 50));
 
-        if(player.ocorreu){
+        if(player.ocorreu && !(player.endGame)){
             this.setBackground(new Color(185, 201, 210));
-            player.ocorreu = false;
         }else if(player.endGame){
             this.setBackground(Color.BLACK);
             endScreen.setVisible(true);
